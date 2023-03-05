@@ -1,8 +1,8 @@
 const Sequelize = require('sequelize');
 
-const sequelize = new Sequelize('sql7603031', 'sql7603031', '8V9V5m4Mce', {
+const sequelize = new Sequelize(process.env.HOST_NAME, process.env.HOST_USERNAME, process.env.HOST_PASSWORD, {
 	dialect: 'mysql',
-	host: 'sql7.freemysqlhosting.net',
+	host: process.env.HOST,
 	logging: false
 });
 
