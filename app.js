@@ -87,7 +87,9 @@ Chat.belongsToMany(User, { through: 'User_Chat' });
 
 Chat.hasMany(TextMessage);
 TextMessage.belongsTo(Chat);
-
+app.get('/', (req, res, next) => {
+	res.send('hello from da3moon');
+});
 sequelize
 	.sync()
 	.then((result) => {
